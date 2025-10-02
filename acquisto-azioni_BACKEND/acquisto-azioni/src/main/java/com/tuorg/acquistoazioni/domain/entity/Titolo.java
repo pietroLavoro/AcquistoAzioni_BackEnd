@@ -18,4 +18,8 @@ public class Titolo {
 
   @Column(name="data_emissione", nullable=false)
   private LocalDate dataEmissione;
+
+  @Column(name = "prezzo_corrente", nullable = false)
+  private BigDecimal prezzoCorrente = BigDecimal.ZERO;
+
 }

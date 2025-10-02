@@ -2,6 +2,11 @@ server:
   port: 8080
 
 spring:
+  config:
+    activate:
+      on-profile: dev
+  flyway:
+    clean-disabled: false   # por defecto es true
   datasource:
     url: jdbc:postgresql://localhost:5432/acquisto_azioni
     username: postgres
@@ -11,6 +16,7 @@ spring:
       ddl-auto: validate
     properties:
       hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
     open-in-view: false
   jackson:
